@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shops",
+  "info": {
+    "name": "shop",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 20,
+      "unique": true
+    },
+    "description": {
+      "type": "text",
+      "maxLength": 140
+    },
+    "logo": {
+      "type": "text",
+      "default": "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX26567497.jpg",
+      "required": true
+    },
+    "banner": {
+      "type": "text",
+      "required": true,
+      "default": "https://i.pinimg.com/originals/0b/a3/d6/0ba3d60362c7e6d256cfc1f37156bad9.jpg"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "products": {
+      "via": "shop",
+      "collection": "product"
+    }
+  }
+}
