@@ -24,25 +24,24 @@
     "logo": {
       "type": "text",
       "default": "https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX26567497.jpg",
-      "required": true
+      "required": false
     },
     "banner": {
       "type": "text",
       "required": true,
       "default": "https://i.pinimg.com/originals/0b/a3/d6/0ba3d60362c7e6d256cfc1f37156bad9.jpg"
     },
-    "slug": {
-      "type": "uid",
-      "targetField": "name",
-      "required": true
-    },
     "users_permissions_user": {
       "plugin": "users-permissions",
       "model": "user"
     },
     "products": {
-      "via": "shop",
-      "collection": "product"
+      "collection": "product",
+      "via": "shop"
+    },
+    "about": {
+      "type": "text",
+      "maxLength": 140
     }
   }
 }

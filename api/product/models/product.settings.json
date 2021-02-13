@@ -27,8 +27,8 @@
       "required": true
     },
     "shop": {
-      "model": "shop",
-      "via": "products"
+      "via": "products",
+      "model": "shop"
     },
     "image_url": {
       "type": "text",
@@ -36,8 +36,18 @@
       "minLength": 10
     },
     "categories": {
-      "via": "products",
-      "collection": "categorie"
+      "collection": "categorie",
+      "via": "products"
+    },
+    "discount_price": {
+      "type": "float"
+    },
+    "category": {
+      "model": "categorie"
+    },
+    "sizes": {
+      "via": "product",
+      "collection": "size"
     }
   }
 }
