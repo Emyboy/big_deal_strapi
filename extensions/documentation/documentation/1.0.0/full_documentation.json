@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/14/2021 4:59:20 PM"
+    "x-generation-date": "02/21/2021 12:57:33 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4599,6 +4599,9 @@
               "role": {
                 "type": "string"
               },
+              "shop": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -4921,6 +4924,9 @@
                 "role": {
                   "type": "string"
                 },
+                "shop": {
+                  "type": "string"
+                },
                 "created_by": {
                   "type": "string"
                 },
@@ -5033,6 +5039,51 @@
                 "type": "string"
               }
             }
+          },
+          "shop": {
+            "required": [
+              "id",
+              "name",
+              "banner"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "logo": {
+                "type": "string"
+              },
+              "banner": {
+                "type": "string"
+              },
+              "users_permissions_user": {
+                "type": "string"
+              },
+              "products": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "about": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -5073,6 +5124,9 @@
             "default": false
           },
           "role": {
+            "type": "string"
+          },
+          "shop": {
             "type": "string"
           },
           "created_by": {

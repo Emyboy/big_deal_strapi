@@ -33,7 +33,8 @@
     },
     "users_permissions_user": {
       "plugin": "users-permissions",
-      "model": "user"
+      "model": "user",
+      "via": "shop"
     },
     "products": {
       "collection": "product",
